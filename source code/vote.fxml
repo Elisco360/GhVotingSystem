@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="787.0" prefWidth="840.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.VoteController">
+   <Pane layoutX="1.0" layoutY="-3.0" prefHeight="793.0" prefWidth="840.0" style="-fx-background-color: white;">
+      <ImageView fitHeight="74.0" fitWidth="86.0" layoutX="737.0" layoutY="692.0" pickOnBounds="true" preserveRatio="true">
+         <Image url="@../pics/coatofArms.png" />
+      </ImageView>
+      <Text fill="#28271e73" layoutX="298.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="VOTE HERE">
+         <font>
+            <Font name="Ubuntu Bold" size="50.0" />
+         </font>
+      </Text>
+      <Line endX="423.0" layoutX="420.0" layoutY="124.0" startX="-420.0" stroke="WHITE" />
+      <Text fill="#1b0261" layoutX="169.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NPP">
+         <font>
+            <Font name="Ubuntu Bold" size="50.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="58.0" fitWidth="102.0" layoutX="393.0" layoutY="167.0" pickOnBounds="true" preserveRatio="true">
+         <Image url="@../pics/NPP.png" />
+      </ImageView>
+      <Text fill="#1b0261" layoutX="169.0" layoutY="315.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NDC">
+         <font>
+            <Font name="Ubuntu Bold" size="50.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="58.0" fitWidth="102.0" layoutX="393.0" layoutY="266.0" pickOnBounds="true" preserveRatio="true">
+         <Image url="@../pics/NDC.png" />
+      </ImageView>
+      <Text fill="#1b0261" layoutX="168.0" layoutY="417.0" strokeType="OUTSIDE" strokeWidth="0.0" text="GUM">
+         <font>
+            <Font name="Ubuntu Bold" size="50.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="58.0" fitWidth="102.0" layoutX="393.0" layoutY="365.0" pickOnBounds="true" preserveRatio="true">
+         <Image url="@../pics/GUM.jpg" />
+      </ImageView>
+      <Text fill="#1b0261" layoutX="167.0" layoutY="509.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CPP">
+         <font>
+            <Font name="Ubuntu Bold" size="50.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="58.0" fitWidth="102.0" layoutX="393.0" layoutY="457.0" pickOnBounds="true" preserveRatio="true">
+         <Image url="@../pics/CPP.jpg" />
+      </ImageView>
+      <Text fill="#1b0261" layoutX="170.0" layoutY="604.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PPP">
+         <font>
+            <Font name="Ubuntu Bold" size="50.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="58.0" fitWidth="102.0" layoutX="406.0" layoutY="554.0" pickOnBounds="true" preserveRatio="true">
+         <Image url="@../pics/PPP.jpg" />
+      </ImageView>
+      <Button fx:id="submit" layoutX="355.0" layoutY="673.0" mnemonicParsing="false" onAction="#trackVote" stylesheets="@../css/fullpackstyling.css" text="SUBMIT VOTE" textFill="WHITE">
+         <font>
+            <Font name="Ubuntu Bold" size="20.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="nppImg" fitHeight="48.0" fitWidth="50.0" layoutX="619.0" layoutY="176.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="ndcImg" fitHeight="48.0" fitWidth="50.0" layoutX="619.0" layoutY="271.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="gumImg" fitHeight="48.0" fitWidth="50.0" layoutX="619.0" layoutY="370.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="cppImg" fitHeight="48.0" fitWidth="50.0" layoutX="619.0" layoutY="462.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="pppImg" fitHeight="48.0" fitWidth="50.0" layoutX="619.0" layoutY="561.0" pickOnBounds="true" preserveRatio="true" />
+      <RadioButton fx:id="npp" layoutX="635.0" layoutY="191.0" mnemonicParsing="false">
+         <toggleGroup>
+            <ToggleGroup fx:id="vote" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="ndc" layoutX="635.0" layoutY="287.0" mnemonicParsing="false" toggleGroup="$vote" />
+      <RadioButton fx:id="gum" layoutX="635.0" layoutY="385.0" mnemonicParsing="false" toggleGroup="$vote" />
+      <RadioButton fx:id="cpp" layoutX="635.0" layoutY="477.0" mnemonicParsing="false" toggleGroup="$vote" />
+      <RadioButton fx:id="ppp" layoutX="635.0" layoutY="574.0" mnemonicParsing="false" toggleGroup="$vote" />
+   </Pane>
+</AnchorPane>
