@@ -1,24 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="787.0" prefWidth="840.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.DashboardController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="787.0" prefWidth="840.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.DashboardController">
    <Pane layoutY="-3.0" prefHeight="787.0" prefWidth="840.0" style="-fx-background-color: white;">
       <ImageView fx:id="png" fitHeight="307.0" fitWidth="271.0" layoutX="285.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true">
-         <Image url="@../pics/woman.jpg" />
+         <Image url="@../pics/woman-removebg-preview.png" />
+         <effect>
+            <DropShadow offsetX="3.0" offsetY="3.0">
+               <color>
+                  <Color opacity="0.1355932354927063" />
+               </color>
+            </DropShadow>
+         </effect>
       </ImageView>
-      <Text fill="#06155e" layoutX="221.0" layoutY="440.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WELCOME" textAlignment="CENTER" wrappingWidth="421.47265625">
+      <Text fill="#220433" layoutX="221.0" layoutY="440.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WELCOME" textAlignment="CENTER" wrappingWidth="421.47265625">
          <font>
             <Font name="Waree Bold" size="62.0" />
          </font>
       </Text>
-      <Text fx:id="name" fill="#2f0b7c" layoutX="136.0" layoutY="525.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TAIWO OGUNKEYE" textAlignment="CENTER" wrappingWidth="590.47265625">
+      <Text fx:id="name" fill="#220433" layoutX="136.0" layoutY="525.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TAIWO OGUNKEYE" textAlignment="CENTER" wrappingWidth="590.47265625">
          <font>
             <Font name="Tlwg Typewriter" size="70.0" />
          </font>
@@ -26,7 +35,7 @@
       <ImageView fitHeight="74.0" fitWidth="86.0" layoutX="745.0" layoutY="692.0" pickOnBounds="true" preserveRatio="true">
          <Image url="@../pics/coatofArms.png" />
       </ImageView>
-      <Text fill="#0a0a6b" layoutX="37.0" layoutY="745.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Status: ">
+      <Text fill="#370654" layoutX="37.0" layoutY="745.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Status: ">
          <font>
             <Font name="Ubuntu" size="24.0" />
          </font>
