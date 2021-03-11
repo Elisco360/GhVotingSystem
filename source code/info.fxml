@@ -5,11 +5,14 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="787.0" prefWidth="840.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.infoController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="787.0" prefWidth="840.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.infoController">
    <Pane layoutY="-3.0" prefHeight="787.0" prefWidth="840.0" style="-fx-background-color: white;">
       <Text fill="#06155e" layoutX="209.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MORE INFO" textAlignment="CENTER" wrappingWidth="421.47265625">
          <font>
@@ -29,46 +32,47 @@
             <Font name="Tlwg Typewriter" size="24.0" />
          </font>
       </Text>
-      <Text fill="#2f0b7c" layoutX="92.0" layoutY="409.0" strokeType="OUTSIDE" strokeWidth="0.0" text="You may send your suggestions via LinkedIn to:" wrappingWidth="668.47265625">
-         <font>
-            <Font name="Tlwg Typewriter" size="24.0" />
-         </font>
-      </Text>
       <Hyperlink layoutX="354.0" layoutY="174.0" onAction="#handleECClick" text="Electoral Commission" textFill="#b5089b">
          <font>
             <Font name="Tlwg Typewriter" size="24.0" />
          </font>
       </Hyperlink>
       <Line endX="588.0" layoutX="186.0" layoutY="337.0" opacity="0.05" startX="-100.0" />
-      <Hyperlink layoutX="87.0" layoutY="430.0" onAction="#handleEliClick" text="Elijah Boateng" textFill="#b5089b">
+      <ImageView fitHeight="181.0" fitWidth="187.0" layoutX="329.0" layoutY="354.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../pics/fist.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="72.0" layoutY="620.0" strokeType="OUTSIDE" strokeWidth="0.0" text="YOUR VOTE IS YOUR POWER">
          <font>
-            <Font name="Tlwg Typewriter" size="20.0" />
+            <Font name="DejaVu Sans Bold" size="45.0" />
          </font>
-      </Hyperlink>
-      <Hyperlink layoutX="556.0" layoutY="430.0" onAction="#handleNanaClick" text="Nana Kofi Boakye" textFill="#b5089b">
-         <font>
-            <Font name="Tlwg Typewriter" size="20.0" />
-         </font>
-      </Hyperlink>
-      <Hyperlink layoutX="319.0" layoutY="430.0" onAction="#handleHassanClick" text="Alhassan Hassan" textFill="#b5089b">
-         <font>
-            <Font name="Tlwg Typewriter" size="20.0" />
-         </font>
-      </Hyperlink>
-      <Hyperlink layoutX="87.0" layoutY="481.0" onAction="#handleTaiwoClick" text="Taiwo Ogunkeye" textFill="#b5089b">
-         <font>
-            <Font name="Tlwg Typewriter" size="20.0" />
-         </font>
-      </Hyperlink>
-      <Hyperlink layoutX="307.0" layoutY="481.0" onAction="#handlePhilipClick" text="Philip Amarteyfio" textFill="#b5089b">
-         <font>
-            <Font name="Tlwg Typewriter" size="20.0" />
-         </font>
-      </Hyperlink>
-      <Line endX="91.0" endY="72.0" layoutX="196.0" layoutY="359.0" opacity="0.11" startX="91.0" startY="112.0" />
-      <Line endX="91.0" endY="72.0" layoutX="444.0" layoutY="359.0" opacity="0.11" startX="91.0" startY="112.0" />
-      <Line endX="91.0" endY="72.0" layoutX="196.0" layoutY="408.0" opacity="0.11" startX="91.0" startY="112.0" />
-      <Line endX="91.0" endY="72.0" layoutX="444.0" layoutY="405.0" opacity="0.11" startX="91.0" startY="112.0" />
-      <Line endX="588.0" layoutX="182.0" layoutY="476.0" opacity="0.05" startX="-100.0" />
+         <fill>
+            <LinearGradient endX="0.9567307692307693" endY="0.38942307692307687" startX="0.1971153846153846" startY="0.17307692307692307">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.9868420958518982" green="0.013706140220165253" blue="0.013706140220165253" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.007407407407407408">
+                     <color>
+                        <Color red="0.9868420958518982" green="0.013706140220165253" blue="0.013706140220165253" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.4777777777777778">
+                     <color>
+                        <Color red="0.9219663739204407" green="0.9868420958518982" blue="0.013706140220165253" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.04111842066049576" green="0.9868420958518982" blue="0.2933114171028137" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Text>
    </Pane>
 </AnchorPane>
