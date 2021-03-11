@@ -5,13 +5,10 @@ import java.time.Period;
 import java.util.Objects;
 
 public class Person {
-    //Instance variables - Person's attributes needed in context
-    private String name;
-    private LocalDate dateOfBirth;
-    private char gender;
-    private int age;
-
-    //Constructors
+    private String name;             //Represents the name of the person
+    private LocalDate dateOfBirth;   //Represents the date of birth of the person
+    private final char gender;       //Represents the gender of the person
+    private final int age;           //Represents the age of the person
 
     /**
      * Default constructor - invokes the parametric constructor
@@ -21,10 +18,8 @@ public class Person {
     }
 
     /**
-     * Parametric constructor
-     *
-     * @param name   represents the name of the person as a string; "Elijah Boateng".
-     * @param dob    represents a person's date of birth which is more efficient than age for updating purposes
+     * @param name represents the name of the person as a string; "Elijah Boateng".
+     * @param dob represents a person's date of birth which is more efficient than age for updating purposes
      * @param gender represents the gender of the person as a character; 'M' for males and 'F' for females
      */
     public Person(String name, LocalDate dob, char gender) {
@@ -36,8 +31,6 @@ public class Person {
 
     //Accessor methods
     /**
-     * A getter method for a person's name
-     *
      * @return the name of the person as a string
      */
     public String getName() {
@@ -45,17 +38,20 @@ public class Person {
     }
 
     /**
-     * A getter method for a person's age
      * @return the age of the person as an integer
      */
     public int getAge() {
         return age;
     }
 
-    protected LocalDate getDateOfBirth(){ return dateOfBirth; }
+    /**
+     * @return the date of birth of the voter
+     */
+    public LocalDate getDateOfBirth() {
+        return dateOfBirth;
+    }
 
     /**
-     * A getter method for  persons gender
      * @return the gender of the person as a string
      */
     public String getGender() {
@@ -67,15 +63,18 @@ public class Person {
     }
 
     //Mutator methods
+    /**
+     * @param name the name to be set
+     */
     public void setName(String name) {
         this.name = name;
     }
-    public void setGender(char gender) {
-        this.gender = gender;
-    }
+
+    /**
+     * @param dateOfBirth the date to be set
+     */
     public void setDateOfBirth(LocalDate dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
-        this.age = Period.between(dateOfBirth, LocalDate.now()).getYears();
     }
 
     /**
@@ -93,6 +92,11 @@ public class Person {
         }
     }
 
+    /**
+     * Called to indicate whether some other object is "equal to" this one.
+     * @param o the reference object with which to compare.
+     * @return true if this object is the same as the obj argument; false otherwise.
+     */
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -104,6 +108,10 @@ public class Person {
                 && Objects.equals(dateOfBirth, person.dateOfBirth);
     }
 
+    /**
+     * This method is supported for the benefit of hash tables such as those provided by HashMap.
+     * @return a hash code value for this object.
+     */
     @Override
     public int hashCode() {
         return Objects.hash(name, dateOfBirth, gender, age);
