@@ -20,13 +20,14 @@ public class Main extends Application {
     }
 
     public static void main(String[] args) {
-
+        //Districts for testing
         District ds1 = new District("Tema North", Region.GreaterAccra);
         District ds2 = new District("Ayawoaso West", Region.GreaterAccra);
         District ds3 = new District("Sagnarigu East", Region.Savannah);
         District ds4 = new District("Nohani South", Region.Savannah);
         District ds5 = new District("Assin North", Region.Central);
 
+        //Polling stations for testing
         PollingStation ps1 = new PollingStation("St.Martin's School", ds1, new File("St.Martins's School.txt"));
         PollingStation ps2 = new PollingStation("North Kaneshie Point 4", ds1, new File("North Kaneshie Point 4.txt"));
         PollingStation ps3 = new PollingStation("Our Lady of Fatima", ds3, new File("Our Lady of Fatima.txt"));
@@ -38,8 +39,8 @@ public class Main extends Application {
         PollingStation ps9 = new PollingStation("White Chapel",ds4, new File("White Chapel.txt"));
         PollingStation ps10 = new PollingStation("Pramso D/A",ds4, new File("Pramso.txt"));
 
-
-        Voter v1= new Voter("Aka Ebenezer", LocalDate.of(1978,8,12),'M',"Akim Tafo",70752023,ps1,"akben101");
+        //Voters for testing
+        Voter v1 = new Voter("Aka Ebenezer", LocalDate.of(1978,8,12),'M',"Akim Tafo",70752023,ps1,"akben101");
         Voter v2 = new Voter("Kelvin Anim", LocalDate.of(1995,4,16),'M', "Navrongo",20122023,ps1, "kev123");
         Voter v3 = new Voter("Rita Segbaya", LocalDate.of(2000,12,28),'F', "Keta",71712023,ps4, "riri20");
         Voter v4 = new Voter("Woraba Ghansah", LocalDate.of(1988,12,3),'F', "Atebubu", 12132155,ps8,"vidash23");
@@ -51,7 +52,7 @@ public class Main extends Application {
         Voter v10 = new Voter("Miriam Duke", LocalDate.of(2002,1,29), 'F',"Cape Coast", 1111010,ps7,"miri75");
         Voter v11 = new Voter("Aisha Nuhu", LocalDate.of(1969,9,3), 'F', "Mumpurugi Yoyo",1111011,ps10,"cash234");
         Voter v12 = new Voter("Naa Ayi-Mensah", LocalDate.of(1998,3,7), 'F', "Korobite",1111012,ps4,"123lll");
-        Voter v13= new Voter("Joesph Mensah", LocalDate.of(1963,10,23), 'M', "Odumasi",1111013,ps5,"qwerty789");
+        Voter v13 = new Voter("Joesph Mensah", LocalDate.of(1963,10,23), 'M', "Odumasi",1111013,ps5,"qwerty789");
         Voter v14 = new Voter("Selasi Azumah", LocalDate.of(1949,9,3), 'M', "Akatsi",1111014,ps1,"asdfg456");
         Voter v15 = new Voter("Christelle McCarthy", LocalDate.of(2001,12,28), 'F', "Mamprobi",1111015,ps2,"chris111");
         Voter v16 = new Voter("Kekeli Mensah", LocalDate.of(2000,5,17), 'M', "Nogokpo",5648521,ps7,"keks787");
@@ -66,13 +67,10 @@ public class Main extends Application {
         Voter v25 = new Voter("Nana Boakye", LocalDate.of(1923,5,18), 'M', "Efie Kuma",3659596,ps5,"muma123");
 
 
-
-
-        Admin db = new Admin();
-        db.addVoter(v1,v2,v3,v4,v5,v6,v7,v8,v9,v10,v11,v12,v13,v14,v15,v16,v17,v18,v19,v20,v21,v22,v23,v24,v25);
-        db.addPollingStation(ps1,ps2,ps3,ps4,ps5,ps6,ps7,ps8,ps9,ps10);
-        db.addDistrict(ds1,ds2,ds3,ds4,ds5);
-        db.addRegion(Region.Oti, Region.Eastern, Region.BonoEast, Region.Ashanti, Region.Ahafo,
+        Admin.addVoter(v1,v2,v3,v4,v5,v6,v7,v8,v9,v10,v11,v12,v13,v14,v15,v16,v17,v18,v19,v20,v21,v22,v23,v24,v25);
+        Admin.addPollingStation(ps1,ps2,ps3,ps4,ps5,ps6,ps7,ps8,ps9,ps10);
+        Admin.addDistrict(ds1,ds2,ds3,ds4,ds5);
+        Admin.addRegion(Region.Oti, Region.Eastern, Region.BonoEast, Region.Ashanti, Region.Ahafo,
                      Region.Central, Region.Bono, Region.Northern, Region.NorthEast, Region.UpperEast,
                      Region.WesternNorth, Region.Western, Region.Volta, Region.UpperWest);
 
