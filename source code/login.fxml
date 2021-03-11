@@ -17,7 +17,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="788.0" prefWidth="1073.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.LoginController">
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="788.0" prefWidth="1094.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.LoginController">
    <rowConstraints>
       <RowConstraints />
       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -27,7 +27,7 @@
       <ColumnConstraints />
       <ColumnConstraints />
    </columnConstraints>
-   <AnchorPane prefHeight="787.0" prefWidth="952.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+   <AnchorPane prefHeight="788.0" prefWidth="1102.0" style="-fx-background-color: white;" GridPane.columnIndex="1" GridPane.rowIndex="1">
       <BorderPane fx:id="mainPane" prefHeight="787.0" prefWidth="1073.0" stylesheets="@../css/fullpackstyling.css">
          <left>
             <Pane prefHeight="879.0" prefWidth="251.0" style="-fx-background-color: #2f034a;" BorderPane.alignment="CENTER">
@@ -102,26 +102,22 @@
                      <Font name="System Bold" size="12.0" />
                   </font>
                </Button>
-               <ImageView fitHeight="25.0" fitWidth="23.0" layoutX="73.0" layoutY="298.0" pickOnBounds="true" preserveRatio="true">
-                  <image>
-                     <Image url="@../pics/house-512.png" />
-                  </image>
-               </ImageView>
-               <ImageView fitHeight="23.0" fitWidth="21.0" layoutX="74.0" layoutY="354.0" pickOnBounds="true" preserveRatio="true">
-                  <image>
-                     <Image url="@../pics/box-512.png" />
-                  </image>
-               </ImageView>
-               <ImageView fitHeight="21.0" fitWidth="21.0" layoutX="74.0" layoutY="412.0" pickOnBounds="true" preserveRatio="true">
-                  <image>
-                     <Image url="@../pics/text-file-4-512.png" />
-                  </image>
-               </ImageView>
-               <ImageView fitHeight="29.0" fitWidth="24.0" layoutX="73.0" layoutY="464.0" pickOnBounds="true" preserveRatio="true">
-                  <image>
-                     <Image url="@../pics/info-4-512.png" />
-                  </image>
-               </ImageView>
+                <ImageView fitHeight="25.0" fitWidth="23.0" layoutX="73.0" layoutY="298.0" pickOnBounds="true"
+                           preserveRatio="true">
+                    <Image url="@../pics/house-512.png"/>
+                </ImageView>
+                <ImageView fitHeight="23.0" fitWidth="21.0" layoutX="74.0" layoutY="354.0" pickOnBounds="true"
+                           preserveRatio="true">
+                    <Image url="@../pics/box-512.png"/>
+                </ImageView>
+                <ImageView fitHeight="21.0" fitWidth="21.0" layoutX="74.0" layoutY="412.0" pickOnBounds="true"
+                           preserveRatio="true">
+                    <Image url="@../pics/text-file-4-512.png"/>
+                </ImageView>
+                <ImageView fitHeight="29.0" fitWidth="24.0" layoutX="73.0" layoutY="464.0" pickOnBounds="true"
+                           preserveRatio="true">
+                    <Image url="@../pics/info-4-512.png"/>
+                </ImageView>
                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#220433" height="85.0" layoutX="-6.0" layoutY="-88.0" stroke="#220433" strokeType="INSIDE" width="1217.0" />
                <effect>
                   <DropShadow offsetX="3.0" offsetY="3.0">
@@ -165,16 +161,14 @@
                      <Font name="Ubuntu" size="17.0" />
                   </font>
                </PasswordField>
-               <ImageView fitHeight="21.0" fitWidth="26.0" layoutX="563.0" layoutY="366.0" opacity="0.1" pickOnBounds="true" preserveRatio="true">
-                  <image>
-                     <Image url="@../pics/user.png" />
-                  </image>
-               </ImageView>
-               <ImageView fitHeight="23.0" fitWidth="28.0" layoutX="562.0" layoutY="465.0" opacity="0.1" pickOnBounds="true" preserveRatio="true">
-                  <image>
-                     <Image url="@../pics/key.png" />
-                  </image>
-               </ImageView>
+                <ImageView fitHeight="21.0" fitWidth="26.0" layoutX="563.0" layoutY="366.0" opacity="0.1"
+                           pickOnBounds="true" preserveRatio="true">
+                    <Image url="@../pics/user.png"/>
+                </ImageView>
+                <ImageView fitHeight="23.0" fitWidth="28.0" layoutX="562.0" layoutY="465.0" opacity="0.1"
+                           pickOnBounds="true" preserveRatio="true">
+                    <Image url="@../pics/key.png"/>
+                </ImageView>
                <Button layoutX="352.0" layoutY="587.0" mnemonicParsing="false" onAction="#handleLoginClick" prefHeight="40.0" prefWidth="153.0" style="-fx-background-radius: 5em; -fx-background-color: #f3edff;" text="LOGIN" textFill="#190326">
                   <font>
                      <Font name="Ubuntu Bold" size="13.0" />
