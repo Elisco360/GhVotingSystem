@@ -1,39 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Shadow?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="787.0" prefWidth="840.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ResultsDisplayControl">
-   <Pane layoutY="-3.0" prefHeight="787.0" prefWidth="840.0" style="-fx-background-color: white;">
-      <Text fill="#0a0a6b" layoutX="132.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Polling Station">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="787.0" prefWidth="840.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ResultsDisplayControl">
+   <Pane layoutY="-3.0" prefHeight="795.0" prefWidth="840.0" style="-fx-background-color: white;">
+      <Line endX="21.0" endY="631.0" fill="#05085b" layoutX="393.0" layoutY="138.0" opacity="0.24" startX="21.0" startY="-121.0" stroke="#d7d2d2">
+         <effect>
+            <Shadow>
+               <color>
+                  <Color red="0.28432831168174744" green="0.04519980400800705" blue="0.6973684430122375" />
+               </color></Shadow>
+         </effect></Line>
+      <Line endX="417.0" endY="219.0" fill="WHITE" layoutX="403.0" layoutY="174.0" opacity="0.31" startX="-392.0" startY="219.0" stroke="WHITE">
+         <effect>
+            <Shadow>
+               <color>
+                  <Color red="0.2984445095062256" green="0.07280000299215317" blue="0.5600000023841858" />
+               </color></Shadow>
+         </effect></Line>
+      <Text fill="#320f6b" layoutX="132.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Polling Station">
          <font>
             <Font name="Ubuntu" size="24.0" />
          </font>
       </Text>
-      <Text fill="#0a0a6b" layoutX="578.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="District ">
+      <Text fill="#320f6b" layoutX="578.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="District ">
          <font>
             <Font name="Ubuntu" size="24.0" />
          </font>
       </Text>
-      <Text fill="#0a0a6b" layoutX="164.0" layoutY="424.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Regional">
+      <Text fill="#320f6b" layoutX="164.0" layoutY="424.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Regional">
          <font>
             <Font name="Ubuntu" size="24.0" />
          </font>
       </Text>
-      <Text fill="#0a0a6b" layoutX="564.0" layoutY="425.0" strokeType="OUTSIDE" strokeWidth="0.0" text="National">
+      <Text fill="#320f6b" layoutX="564.0" layoutY="425.0" strokeType="OUTSIDE" strokeWidth="0.0" text="National">
          <font>
             <Font name="Ubuntu" size="24.0" />
          </font>
       </Text>
-      <PieChart fx:id="national" layoutX="418.0" layoutY="434.0" prefHeight="335.0" prefWidth="411.0" />
-      <PieChart fx:id="district" layoutX="415.0" layoutY="57.0" prefHeight="335.0" prefWidth="411.0" />
-      <PieChart fx:id="pollingStation" layoutX="14.0" layoutY="59.0" prefHeight="335.0" prefWidth="396.0" />
-      <PieChart fx:id="regional" layoutX="6.0" layoutY="434.0" prefHeight="335.0" prefWidth="411.0" />
-      <Line endX="21.0" endY="631.0" layoutX="393.0" layoutY="138.0" opacity="0.41" startX="21.0" startY="-121.0" stroke="#d7d2d2" />
-      <Line endX="417.0" endY="219.0" layoutX="403.0" layoutY="174.0" opacity="0.33" startX="-392.0" startY="219.0" stroke="#d7d2d2" />
+      <PieChart fx:id="national" layoutX="418.0" layoutY="434.0" prefHeight="335.0" prefWidth="411.0">
+         <effect>
+            <DropShadow offsetX="3.0" offsetY="3.0">
+               <color>
+                  <Color opacity="0.33898305892944336" />
+               </color>
+            </DropShadow>
+         </effect></PieChart>
+      <PieChart fx:id="district" layoutX="415.0" layoutY="57.0" prefHeight="335.0" prefWidth="411.0">
+         <effect>
+            <DropShadow offsetX="3.0" offsetY="3.0">
+               <color>
+                  <Color opacity="0.3305084705352783" />
+               </color>
+            </DropShadow>
+         </effect></PieChart>
+      <PieChart fx:id="pollingStation" layoutX="13.0" layoutY="49.0" prefHeight="345.0" prefWidth="397.0">
+         <effect>
+            <DropShadow offsetX="3.0" offsetY="3.0">
+               <color>
+                  <Color opacity="0.35593220591545105" />
+               </color>
+            </DropShadow>
+         </effect></PieChart>
+      <PieChart fx:id="regional" layoutX="6.0" layoutY="434.0" prefHeight="335.0" prefWidth="411.0">
+         <effect>
+            <DropShadow offsetX="3.0" offsetY="3.0">
+               <color>
+                  <Color opacity="0.2881355881690979" />
+               </color>
+            </DropShadow>
+         </effect></PieChart>
    </Pane>
 </AnchorPane>
