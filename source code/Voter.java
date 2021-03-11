@@ -3,8 +3,10 @@ package sample;
 import java.io.*;
 import java.time.LocalDate;
 
+/**
+ * This class provides the blueprint for a voter object
+ */
 public class Voter extends Person{
-    //Instance variables
     private final long voterId;
     private final PollingStation pollingStation;
     private final String homeTown;
@@ -15,7 +17,6 @@ public class Voter extends Person{
     private PollingStation viewChoice;
 
     /**
-     * Parametric constructor
      * @param homeTown represents the native origin of the voter.
      * @param VOTER_ID represents the unique identity of the voter.
      */
@@ -28,7 +29,6 @@ public class Voter extends Person{
     }
 
     /**
-     * Parametric construction
      * @param person represents the relevant details of the voter as a person.
      * @param homeTown represents the native origin of the voter.
      * @param VOTER_ID represents the unique identity of the voter.
@@ -42,7 +42,6 @@ public class Voter extends Person{
     }
 
     /**
-     * Parametric constructor
      * @param name represents the name of the voter.
      * @param dob represents the date of birth of the voter.
      * @param gender represents the gender of the the voter.
@@ -55,11 +54,11 @@ public class Voter extends Person{
         this.voterId = VOTER_ID;
         this.homeTown = homeTown;
         this.password = password;
+        try { votedList.createNewFile(); }
+        catch (IOException ignored) { }
     }
 
-    //Accessor methods
     /**
-     * To access a voter's polling station
      * @return the polling station name as a string
      */
     public PollingStation getPollingStation() {
@@ -67,7 +66,6 @@ public class Voter extends Person{
     }
 
     /**
-     * To access a voter's id
      * @return the voter's identity number as a string
      */
     public long getVOTER_ID() {
@@ -75,52 +73,57 @@ public class Voter extends Person{
     }
 
     /**
-     * To get the voter's hometown
      * @return the hometown of the voter as a string
      */
     public String getHomeTown() {
         return homeTown;
     }
 
-    //Auxiliary methods
     /**
      * To allow and track voters while they cast vote
      */
     public void castVote(int position){
-        if(!this.hasVoted() /*&& !this.pollingStation.getPollingStationName().equals("Not registered")*/){
-            this.pollingStation.voted.add(this);
+        if(!this.hasVoted()){
             this.candidate = position;
-            this.pollingStation.votes.set(position-1, this.pollingStation.votes.get(position-1)+1);
         }
         else{ System.out.println("CANNOT VOTE TWICE!"); }
     }
 
+    /**
+     * @return the candidate who was voted for
+     */
     public int getCandidate() {
         return candidate;
     }
 
     /**
-     * toString method overridden from the Object class
      * @return the voter's relevant details to any user
      */
     @Override
     public String toString() {
         if(this.getGender().equals("Male")){
             return super.toString()+
-                    "\nVotes at: "+pollingStation.getPollingStationName()+
+                    "\nVotes at: "+pollingStation.toString()+
                     "\nVoter's ID: "+ voterId;
         }else{
             return super.toString()+
-                    "\nVotes At: "+pollingStation.getPollingStationName()+
+                    "\nVotes At: "+pollingStation.toString()+
                     "\nVoter's ID: "+ voterId;
         }
 
     }
 
+    /**
+     * @return the combination of the voter's Id and password
+     */
     public String credentials(){
         return String.valueOf(voterId).concat(password);
     }
 
+    /**
+     * Called to check if the voter's Id is present in the list of voters who have voted
+     * @return true if voter's Id is present in the text file and false if otherwise
+     */
     public boolean hasVoted(){
         BufferedReader myReader = null;
         try {
@@ -131,10 +134,14 @@ public class Voter extends Person{
                     return true;
                 }
             }
-        } catch (IOException e) { }
+        } catch (IOException e) { e.printStackTrace();}
         return false;
     }
 
+    /**
+     * Called to the position of the candidate who the voter voted for
+     * @return the position of the candidate who was voted for as an integer
+     */
     public int votedFor(){
         BufferedReader myReader = null;
         try {
@@ -145,14 +152,21 @@ public class Voter extends Person{
                     return Integer.parseInt(voter[1]);
                 }
             }
-        } catch (IOException e) {  }
+        } catch (IOException ignored) {  }
         return 0;
     }
 
+    /**
+     * Called in the results selection class to set the polling station where the voter wants to view results
+     * @param p represents the polling station selected by the voter
+     */
     public void setViewChoice(PollingStation p){
         viewChoice = p;
     }
 
+    /**
+     * @return the polling station selected by the voter as a PollingStation object
+     */
     public PollingStation getViewChoice() {
         return viewChoice;
     }
